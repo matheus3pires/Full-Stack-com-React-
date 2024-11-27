@@ -89,7 +89,6 @@ const Clientes = () => {
         Módulo de Clientes
       </Typography>
 
-      {/* Busca por nome */}
       <Box mb={4}>
         <Paper
           sx={{
@@ -118,7 +117,6 @@ const Clientes = () => {
         </Paper>
       </Box>
 
-      {/* Adicionar novo cliente */}
       <Paper sx={{ padding: 3, borderRadius: 2, boxShadow: 2, mb: 4 }}>
         <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>
           Adicionar Novo Cliente
@@ -167,7 +165,6 @@ const Clientes = () => {
         </form>
       </Paper>
 
-      {/* Lista de clientes */}
       <Typography
         variant="h6"
         gutterBottom
@@ -214,7 +211,6 @@ const Clientes = () => {
         )}
       </Box>
 
-      {/* Modal de clientes encontrados */}
       <Dialog open={modalOpen} onClose={() => setModalOpen(false)} fullWidth maxWidth="sm">
         <DialogTitle>Clientes Encontrados</DialogTitle>
         <DialogContent dividers>

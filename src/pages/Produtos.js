@@ -89,7 +89,6 @@ const Produtos = () => {
         Módulo de Produtos
       </Typography>
 
-      {/* Busca por nome */}
       <Box mb={4}>
         <Paper
           sx={{
@@ -118,7 +117,6 @@ const Produtos = () => {
         </Paper>
       </Box>
 
-      {/* Adicionar novo produto */}
       <Paper sx={{ padding: 3, borderRadius: 2, boxShadow: 2, mb: 4 }}>
         <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>
           Adicionar Novo Produto
@@ -161,7 +159,6 @@ const Produtos = () => {
         </form>
       </Paper>
 
-      {/* Lista de produtos */}
       <Typography
         variant="h6"
         gutterBottom

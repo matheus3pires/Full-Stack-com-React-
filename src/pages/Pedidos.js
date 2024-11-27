@@ -29,7 +29,6 @@ const Pedidos = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [pedidosFiltrados, setPedidosFiltrados] = useState([]);
 
-  // Buscar todos os pedidos
   const fetchPedidos = async () => {
     try {
       const response = await fetch('http://localhost:8080/pedidos');
@@ -40,7 +39,6 @@ const Pedidos = () => {
     }
   };
 
-  // Buscar clientes para o dropdown
   const fetchClientes = async () => {
     try {
       const response = await fetch('http://localhost:8080/clientes');
@@ -51,7 +49,6 @@ const Pedidos = () => {
     }
   };
 
-  // Buscar produtos para o dropdown
   const fetchProdutos = async () => {
     try {
       const response = await fetch('http://localhost:8080/produtos');
@@ -62,7 +59,6 @@ const Pedidos = () => {
     }
   };
 
-  // Buscar pedidos por ID do cliente
   const buscarPedidosPorCliente = async () => {
     if (!clienteBusca) {
       console.error('Preencha o ID do cliente para buscar.');
@@ -75,13 +71,12 @@ const Pedidos = () => {
       }
       const data = await response.json();
       setPedidosFiltrados(data);
-      setIsModalOpen(true); // Abrir modal com os pedidos filtrados
+      setIsModalOpen(true); 
     } catch (error) {
       console.error('Erro ao buscar pedidos por cliente:', error.message);
     }
   };
 
-  // Buscar pedidos por ID do produto
   const buscarPedidosPorProduto = async () => {
     if (!produtoBusca) {
       console.error('Preencha o ID do produto para buscar.');
@@ -94,13 +89,12 @@ const Pedidos = () => {
       }
       const data = await response.json();
       setPedidosFiltrados(data);
-      setIsModalOpen(true); // Abrir modal com os pedidos filtrados
+      setIsModalOpen(true); 
     } catch (error) {
       console.error('Erro ao buscar pedidos por produto:', error.message);
     }
   };
 
-  // Adicionar um novo pedido
   const adicionarPedido = async (e) => {
     e.preventDefault();
     if (!novoPedido.idCliente || novoPedido.idsProdutos.length === 0) {
@@ -141,7 +135,6 @@ const Pedidos = () => {
         Módulo de Pedidos
       </Typography>
 
-      {/* Busca por cliente ou produto */}
       <Box mb={4}>
         <Paper
           sx={{
@@ -196,7 +189,6 @@ const Pedidos = () => {
         </Paper>
       </Box>
 
-      {/* Adicionar novo pedido */}
       <Paper sx={{ padding: 3, borderRadius: 2, boxShadow: 2, mb: 4 }}>
         <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold' }}>
           Adicionar Novo Pedido
@@ -255,7 +247,6 @@ const Pedidos = () => {
         </form>
       </Paper>
 
-      {/* Lista de pedidos */}
       <Typography
         variant="h6"
         gutterBottom
@@ -298,7 +289,7 @@ const Pedidos = () => {
           </Typography>
         )}
       </Box>
-      {/* Modal de pedidos filtrados */}
+      
       <Dialog open={isModalOpen} onClose={() => setIsModalOpen(false)} fullWidth maxWidth="sm">
         <DialogTitle>Pedidos Encontrados</DialogTitle>
         <DialogContent dividers>

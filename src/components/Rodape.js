@@ -5,7 +5,7 @@ const Rodape = () => {
   return (
     <Box
       sx={{
-        position: 'fixed',  // Garantir que o rodapé fique fixo na parte inferior
+        position: 'fixed', 
         bottom: 0,
         width: '100%',
         backgroundColor: '#333',
@@ -13,13 +13,13 @@ const Rodape = () => {
         padding: '10px 0',
         textAlign: 'center',
         fontSize: '14px',
-        zIndex: 1000,  // Para garantir que o rodapé fique sobre outros elementos
+        zIndex: 1000, 
       }}
     >
       <Typography>
         <strong>Contato:</strong>
         <a
-          href="mailto:matheuspiressdev@gmail.com" // Usando mailto para links de e-mail
+          href="mailto:matheuspiressdev@gmail.com"
           style={{ color: '#fff', textDecoration: 'none', marginLeft: '5px' }}
         >
           matheuspiressdev@gmail.com

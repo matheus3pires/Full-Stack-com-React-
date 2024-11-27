@@ -10,8 +10,8 @@ const Home = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'flex-start', // Alinha o conteúdo ao topo
-        height: '90vh', // Menos altura para permitir mais espaço na parte superior
+        justifyContent: 'flex-start', 
+        height: '90vh',
         background: 'linear-gradient(to bottom, #2196F3, #21CBF3)',
         color: '#fff',
         textAlign: 'center',
